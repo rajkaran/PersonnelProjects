@@ -1,0 +1,220 @@
+﻿<!-- index.htm
+    Main file of SalesMobile project
+
+	This file includes jquery-1.9.0.js, jquery-1.9.1.js, jquery-ui.js, PopulateDatabase.js,
+    createSummarySlide.js, movement.js and createAndPopulateSlide.js.
+    
+    This file handles all the events occur in the application and includes two stylesheets
+    populateSlide.css and jquery-ui.css.
+
+-->
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sales Mobile MobiApp</title>
+
+<!-- Removing default margin from every HTML element -->
+<style type="text/css">
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+</style>
+<!-- Adding Style Sheets -->
+<link href="css/PopulateSlide.css" rel="stylesheet" type="text/css">
+<link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!-- Adding JavaScript files -->
+<script type="text/javascript" src="js/jquery-1.9.0.js" ></script>
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/populateDatabase.js"></script>
+<script type="text/javascript" src="js/createSummarySlide.js"></script>
+<script type="text/javascript" src="js/movement.js"></script>
+<script type="text/javascript" src="js/createAndPopulateSlide.js"></script>
+<script type="text/javascript">
+
+//declaring Variables
+var themeArray;
+var dbObject;
+var tablesArray = Array("slides", "controls", "theme", "surveyInfo", "surveyData", "likeData");
+var slideSeqArray;
+var slideContainSubSetArray;
+var summarySeqArray = Array();
+var surveyStartTimeStamp;
+var surveyEndTimeStamp;
+
+//wait untill all the JavaScript files uploaded
+$(document).ready(function(){
+	
+	//check if browser supports the offline database
+	if (window.openDatabase) {
+		
+		/*Create a database object.	This statement will either return the existing database
+		 or null and call our creation callback onDBCreate*/
+		dbObject = openDatabase('salesMobileDb', '1.0', 'sales mobile database', 5 * 1024 * 1024);
+		
+		//show a loading popup
+		$('#loadingPopUp').show();
+		
+		/*check if database contains the tables required for building application
+		if any of the table is missing then system will make connection to the
+		server and download the data to popualate local database(Sqlite).*/
+		checkTableInDB = "SELECT name FROM sqlite_master where type = 'table'";
+		dbObject.transaction(function (tx) {
+			tx.executeSql(checkTableInDB,[],
+			function(tx,results) {
+				var dbAlreadyPopulated;
+				var tablesInDB = [];
+				for (i=0; i<results.rows.length; i++) { 
+				   var row=results.rows.item(i);
+				   tablesInDB.push(row['name']);
+				}
+				var tablefound = true;
+			   for(j=0; j<tablesArray.length; j++) {
+				   if(tablefound == true) {
+					   for(k=0;k<tablesInDB.length;k++) {
+						   tablefound = false;
+						   if(tablesArray[j] == tablesInDB[k]) {
+							   tablefound = true;
+								k=tablesInDB.length;
+						   }
+					   }
+				   }else{
+					   j=tablesArray.length;
+				   }
+				}
+				
+				//if the required tables exists in database then construct the application
+				if(tablefound == true) {
+					
+					//get all the data from theme table into the array
+					createThemeArray(dbObject,function () {
+						var themestring = document.getElementById("themeArray").innerText;
+						themeArray = themestring.split(",");
+					
+						/*create and populate Slides with the data retrieved from the Slide and 
+						Control tables. initialize three arrays:-slideSeqArray, 
+						slideContainSubSetString and summarySeqArray with the names of Slides*/		
+						createSlides(dbObject, function () {
+							var slideSeqString = document.getElementById("slideSeq").innerText;
+							var slideContainSubSetString = 
+											document.getElementById("containSubSet").innerText;
+							slideSeqArray = slideSeqString.split(",");
+							for(i=0;i<slideSeqArray.length;i++){
+							summarySeqArray[i] = slideSeqArray[i];
+							}
+							slideContainSubSetArray = slideContainSubSetString.split(",");
+						
+							//close the loading popup			
+							setTimeout(function (){$('#loadingPopUp').hide();},2000);
+							
+							//get current time
+							surveyStartTimeStamp = getCurrentTimeStamp();
+							
+							//course of action on the event of next button touched.			
+							$("#next").click(function(){
+								$("#next").attr("src","img/next0.gif");
+								goRight();
+							});
+							
+							//course of action on the event of back button touched.			
+							$("#back").click(function(){
+								$("#back").attr("src","img/back0.gif");
+								goLeft();
+							});
+							
+							//course of action on the event of finish button touched.			
+							$("#finish").click(function(){
+								showSummary(dbObject);
+							});
+							
+							/*Go to the synchronization Slide at where user can synchronization the survey data
+							and Application. hide the syncrhonization slide initially and add close functionality 
+							over the close button on Sync Slide */			
+							$("#goSyncSlide").click(function(){
+								$("#goSyncSlide")
+										.css({ "color":"#fff", "border":"1px solid black"});
+								document.getElementById('syncPopUp').style.display='block';
+								$("#close").css({ "color": "#FFFFFF"});
+							});
+							
+							//course of action to be taken when close button on Sync Slide is touched.			
+							$("#close").click(function(){
+								$("#goSyncSlide").css({ "color":themeArray[15], "border":"0px"});
+								$("#close").css({ "color": "#000"});
+								$('#syncPopUp').hide();
+								$("#syncApp").css({ "color": "#FFFFFF"});
+								$("#syncData").css({ "color": "#FFFFFF"});
+							});
+							
+							/*Pressing of this button will establish a connection to the server to download
+							application data and populate the local database (this functionality has yet to be
+							added)*/
+							$("#syncApp").click(function(){
+								$("#syncApp").css({ "color": "#000"});
+							});
+							
+							/*Pressing of this button will establish a connection to the server to upload the
+							Survey data and populate the local database (this functionality has yet to be
+							added)*/			
+							$("#syncData").click(function(){
+								$("#syncData").css({ "color": "#000"});
+							});
+									
+						});					
+					});
+				}
+				//if required tables didn't find then create and populate tables with server data.  
+				else if(tablefound == false) generateTB(dbObject);
+			},onError);
+		});	
+	} else alert("This device does not have HTML5 Database support");
+});
+
+</script>
+
+<!-- Major structure of divs   -->
+<div class="slideOuterContainer" id="slideOuterContainer">
+	<div class="slideInnerContainer" id = "slideInnerContainer"> </div>
+    <div class="navigator" id = "navigator"></div>
+</div>
+
+<!-- pop up   -->
+<div id="loadingPopUp" class="loadingPopUpClass">
+    <table border="0" id="loadingPopUpTable">
+        <tr><td><img src="img/loading_big_transparent.gif" width="120" height="120" /></td></tr>
+        <tr><td style="font-size:30px;" id="firstMessage">Loading.....</td></tr>
+        <tr><td>&nbsp;</td></tr>
+        <tr><td id="secondMessage">Please Wait</td></tr>
+    </table>
+</div>
+
+<!-- Sync Slide   -->
+<div id="syncPopUp" class="syncPopUpClass">
+    <div class="syncPopUpInner">
+        <button type="button" id="close" >Close</button>
+        <p class="paragraph">
+            <bdi>Synchronize your Data or Application</bdi><br />Before synchronizing application
+            or data please ensure that you are connected to the internet. Click on &quot;Sync App&quot; 
+            button if you want to Synchronize App or click on &quot;Sync Data&quot; button if you want
+             to upload survey data, on the server.<br /> To exit from this window please click on close 
+             button on top-right corner.
+        </p>
+        <div>
+            <button type="button" id="syncApp">Sync App</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" id="syncData">Sync Data</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* CSS Document */
+
+.contentSection{
+	background-color:#FFF;
+	border:1px solid #15777a;
+	/*remove this*/
+	min-height:447px;
+	overflow:auto;
+}
+
+.readArticle{
+	height:auto;
+	margin:0 auto;
+	position:relative;
+	width:790px;
+	border:1px solid black;
+	text-align:center;
+	text-align:left;
+	border-bottom:0px;
+}
+
+.readArticle textarea{
+	resize:none;
+}
+
+.settingDialogBox {
+	display:none;
+}
+
+.settingDialogBox .settingError {
+	color:#8a0c03;
+}
+
+.settingDialogBox .settingError span{
+	color:#15777a;
+}
+
+.settingDialogBox fieldset div {
+	font-family:Calibri;
+	font-size:18px;
+	margin:5px 0;
+	margin-left:10px;
+}
+
+.settingDialogBox .connect div {
+	position:relative;
+}
+
+.settingDialogBox .connect div.parent input{
+	position:absolute;
+	left:155px;
+	height:20px;
+	width:220px;
+	font-size:14px;
+}
+
+.settingDialogBox .connect div.parent select{
+	position:absolute;
+	left:155px;
+	height:25px;
+	width:225px;
+	font-size:14px;
+}
+
+.settingDialogBox .connect div#chooseParent{
+	position:absolute;
+	left:405px;
+	top:85px;
+	height:22px;
+	font-family:"Lucida Console", Monaco, monospace;
+	font-size:15px;
+}
+
+.settingDialogBox .info div {
+	position:relative;
+	margin:5px 0;
+}
+
+.settingDialogBox .info div input{
+	position:absolute;
+	left:105px;
+	height:20px;
+	width:368px;
+	font-size:14px;
+	border:1px solid #CCC;
+}
+
+.settingDialogBox .sendNow .pdf button{
+	margin:0px;
+	padding:0px;
+	border:0px;
+	background-color:#FFF;
+	text-decoration:underline;
+	color:#03F;
+	cursor:pointer;
+}
+
+.settingDialogBox .sendNow div #emailId{
+	margin-left:10px;
+	width:280px;
+	height:20px;
+	font-size:14px;
+}
+
+.settingDialogBox .sendNow div #send{
+	height:27px;
+	font-family:"Lucida Console", Monaco, monospace;
+	font-size:18px;
+}
+
+.settingDialogBox .setup div.email {
+	display:table;
+}
+
+.settingDialogBox .setup div.email label{
+	display:table-cell;
+	vertical-align:top;
+}
+
+.settingDialogBox .setup div.email textarea{
+	margin-left:10px;
+	resize:none;
+	width:390px;
+	heigh:60px;
+	overflow:auto;
+	font-size:14px;
+	border:1px solid #CCC;
+}
+
+#submitButton{
+	width:790px;
+	margin:0 auto;
+	text-align:center;
+	height:auto;
+	border:1px solid black;
+	border-top:0px;
+}
+
+#submitButton button{
+	width:auto;
+	height:30px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:24px;
+	background-color: #15777a;
+	border:1px outset #15777a;
+	color:#8a0c03;
+	padding:0 15px;
+	margin-bottom:5px;
+}
+
+#submitButton button:hover{
+	background-color: #8a0c03;
+	border:1px inset #8a0c03;
+	color:#15777a;
+}

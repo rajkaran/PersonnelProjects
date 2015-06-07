@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+
+.contentSection{
+	background-color:#FFF;
+	border:1px solid #15777a;
+	min-height:477px;
+	overflow:auto;
+}
+
+#returnMsg{
+	height:auto;
+	color:#8a0c03;
+	text-align:left;
+	margin-left:10px;
+	font-size:20px;
+}
+
+#returnMsg span{
+	color:#15777a;
+}
+
+.userList th{
+	padding:5px;
+}
+
+.userList .name, .userList .email{
+	width:150px;
+}
+
+.userList .title{
+	width:100px;
+}
+
+.userData{
+	text-align:left;
+	width:auto;
+	height:auto;
+	padding-left:150px;
+}
+
+.userData div{
+	margin:15px 0;
+	position:relative;
+}
+
+.userData label{
+	font-size:22px;
+}
+
+.userData input{
+	position:absolute;
+	left:192px;
+	width:200px;
+	border:1px solid black;
+	height:22px;
+}
+
+.userData span{
+	margin-left:310px;
+	color:#8a0c03;
+}
+
+.userData div#title{
+	display:table;
+}
+
+.userData div#title label{
+	display:table-cell;
+	vertical-align:top;
+}
+
+.userData select{
+	margin-left:135px;
+	width:205px;
+}
+
+.userData img{
+	margin-left:75px;
+}
+
+
+
+
+

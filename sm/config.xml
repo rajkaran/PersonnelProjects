@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        version="1.1.0.0" id="SalesMobileApp"> 
+    <name>SM</name>
+    <author>salesmobile</author>
+    <description>Sales Mobile Mobile Application</description>
+    <icon src="img/SalesMobileIcon.png"/>
+    <content src="index.htm"/>
+    
+</widget>

@@ -1,0 +1,198 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, div, span, a, button, input, textarea, select, label {
+	margin:0px;
+	padding:0px;
+}
+
+.controlPanel{
+	width:auto;
+	height:80px;
+	border-bottom:1px solid #666;
+}
+
+.inlineToolbar{
+	/*border:1px solid #900;*/
+	float:left;
+	width:550px;
+	height:80px;
+}
+
+.controlWrapper{
+	float:right;
+	padding:12px 5px;
+	height:auto;
+	width:auto;
+	text-align:center;
+	/*border:1px solid #666;*/
+}
+
+.controlSpec{
+	font-family:kalinga;
+	font-size:30px;
+	border:1px solid #C0C0C0;
+	width:50px;
+	height:50px;
+	/* Mozilla: */
+    background: -moz-linear-gradient(top, #FFFFFF, #E2E2E2); 
+    /* Chrome, Safari:*/
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#E2E2E2));
+    /* MSIE */
+    filter : progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#E2E2E2');
+    /* Opera 11.10 + */
+    background-image: -o-linear-gradient(top, #FFFFFF, #E2E2E2);
+}
+
+.canvasPanel{
+	border:1px solid #666;
+	width:790px;
+	margin:0 11%;
+	height:500px;
+	position:relative;
+	overflow:hidden;
+}
+
+.chosenToolBox{
+	width:60px;
+	height:20px;
+	position:absolute;
+	border:1px outset #000;
+	background-color:#FFF;
+	opacity:1;
+}
+
+.chosenToolBox .button{
+	display:block;
+	float:left;
+	width:20px;
+	height:20px;
+	border:0px;
+	margin:0px;
+	padding:0px;
+	text-indent:-99999;
+}
+
+
+.chosenToolBox #move {
+	background:url(../img/move.png) no-repeat center;
+}
+.chosenToolBox #move:hover {
+	background-size:contain;
+}
+
+.chosenToolBox #edit {
+	background:url(../img/edit.png) no-repeat center;
+}
+
+.chosenToolBox #edit:hover {
+	background-size:contain;
+}
+
+.chosenToolBox #remove {
+	background:url(../img/remove.png) no-repeat center;
+}
+
+.chosenToolBox #remove:hover {
+	background-size:contain;
+}
+
+.editPopup {
+	z-index:999999;
+}
+
+.editPopup .textAreaContainer {
+	width:100%;
+	height:auto;
+	text-align:left;
+	font-family:Tahoma, Geneva, sans-serif;
+	margin-top:10px;
+}
+
+.editPopup .textAreaContainer label {
+	float:left;
+	width:auto;
+	width:125px;
+	margin-left:17px;
+}
+
+.editPopup .textAreaContainer textarea {
+	width:125px;
+	height:125px;
+	resize: none;
+	overflow:auto;
+	display:inline;
+	margin-left:10px;
+	margin-top:5px;
+	background-color:#E9E9E9;
+}
+
+.editPopup .textBoxContainer {
+	width:100%;
+	height:auto;
+	/*border:1px solid green;*/
+	text-align:left;
+	font-family:Tahoma, Geneva, sans-serif;
+	margin-top:10px;
+}
+
+.editPopup .textBoxContainer input {
+	margin-left:7px;
+	margin-top:5px;
+	width:70px;
+}
+
+.editPopup p {
+	width:100%;
+	height:auto;
+	/*border:1px solid green;*/
+	text-align:left;
+	font-family:Tahoma, Geneva, sans-serif;
+	margin-top:10px;
+	font-size:12px;
+	color:#F60;
+}
+
+.editPopup .checkBoxContainer {
+	width:100%;
+	height:auto;
+	/*border:1px solid green;*/
+	text-align:left;
+	font-family:Tahoma, Geneva, sans-serif;
+	margin-top:10px;
+}
+
+.editPopup .checkBoxContainer input {
+	margin-right:10px;
+}
+
+.editPopup .checkBoxContainer label {
+	/*margin-left:15px;*/
+	margin-top:5px;
+}
+
+.editPopup .dropDownContainer {
+	width:100%;
+	height:auto;
+	/*border:1px solid green;*/
+	text-align:left;
+	font-family:Tahoma, Geneva, sans-serif;
+	margin-top:10px;
+}
+
+.editPopup .dropDownContainer select {
+	margin-left:10px;
+}
+
+.editPopup .errorContainer {
+	width:100%;
+	height:auto;
+	/*border:1px solid green;*/
+	text-align:left;
+	font-family:Tahoma, Geneva, sans-serif;
+	margin-top:10px;
+	font-size:14px;
+	color:#F00;
+	display:none;
+}
+

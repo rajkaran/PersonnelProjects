@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+
+.contentSection{
+	width:1024px;
+	margin:0 auto;
+	text-align:center;
+	min-height:570px;
+	position:relative;
+}
+
+#submitError{
+	margin-left:20px;
+	text-align:left;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	color:#F00;
+}
+
+#breadCrumb{
+	margin:10px 0 10px 10px;
+	text-align:left;
+	font-family:papyrus;
+	font-size:18px;
+	font-weight:bold;
+	color:#15777A;
+}
+
+.movement{
+	position:fixed;
+	top:42%;
+	border:0px;
+}
+
+.movement img{
+	border:0px;
+}
+
+#slideWrapper{
+	width:792px;/*2px to cover border around articles*/
+	height:auto;
+	margin:0 auto;
+	text-align:center;
+	overflow:hidden;
+}
+
+#slider{
+	height:auto;
+	text-align:left;
+	
+}
+
+.article{
+	border:1px solid black;
+	width:788px;
+	position:relative;
+	float:left;
+}
+
+textarea{
+	resize:none;
+}
+
+#submit{
+	position:absolute;
+	bottom:0px;
+	width:790px;
+	height:auto;
+}
+
+#submit input{
+	text-align:center;
+	width:120px;
+	height:35px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:20px;
+	margin:0 42%;
+}
+
+.divToHide{
+	z-index:-99;
+	overflow:hidden;
+	border:0px;
+}
+
+
+.coveringDiv{
+	z-index:9999;
+	opacity:1;
+	opacity:100;
+	
+}
+
+
+
+

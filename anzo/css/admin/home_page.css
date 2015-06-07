@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+.contentSection{
+	background-color:#FFF;
+	border:1px solid #15777a;
+	height:auto;
+	overflow:auto;
+}
+
+#errorMsg{
+	height:auto;
+	width:auto;
+	color:#ce0010;
+	text-align:left;
+	padding:5px 0px 5px 10px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+}
+
+#errorMsg span{
+	color:#15777a;
+}
+
+.eventWrapper{
+	height:600px;
+}
+
+#event{
+	width:700px;
+	height:auto;
+	float:left;
+	text-align:left;
+}
+
+#event .eventName{
+	/*margin-top:10px;*/
+}
+
+#event .eventName label, #event .eventDescription label {
+	font-family:Arial, Helvetica, sans-serif;
+	margin-left:20px;
+	font-size:24px;
+}
+
+#event .eventName input {
+	margin-left:30px;
+	width:300px;
+	height:30px;
+	border:1px solid #000;
+}
+
+#event .eventDescription  {
+	margin-top:30px;
+}
+
+#event .eventDescription div{
+	margin-top:7px;
+}
+
+#event .eventDescription textarea{
+	width:700px;
+	height:370px;
+	resize:none;
+	overflow:auto;
+}
+
+#eventList{
+	width:auto;
+	height:auto;
+	float:right;
+	margin-right:5px;
+}
+
+#eventList caption{
+	font-size:28px;
+}
+
+#eventList .name{
+	width:190px;
+}
+
+#eventList td.name{
+	text-align:left;
+}
+
+#eventList td.name a{
+	text-decoration:none;
+}
+
+#eventList th{
+	padding:5px;
+}

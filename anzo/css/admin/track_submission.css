@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+
+.contentSection{
+	background-color:#FFF;
+	border:1px solid #15777a;
+	min-height:447px;
+	overflow:auto;
+}
+
+#back{
+	text-align:left;
+	width:auto;
+	height:auto;
+	margin-left:10px;
+}
+
+#back a{
+	text-decoration:none;
+	font-family:"Adobe Garamond Pro";
+	font-size:24px;
+	color:#8a0c03;
+	font-weight:bold;
+	width:auto;
+	height:auto;
+	margin:0px;
+}
+
+#back a:hover{
+	color:#15777a;
+}
+
+#back a span{
+	font-family:"Lucida Console", Monaco, monospace;
+	font-size:40px;
+}
+
+#note{
+	margin:0 40px;
+}
+
+#note p{
+	font-family:"Times New Roman", Times, serif;
+	font-size:18px;
+	color:#15777a;
+}
+
+#note p em{
+	font-size:22px;
+}
+
+.list .name{
+	width:400px;
+}
+
+.list td.name{
+	text-align:left;
+}
+
+.list td.name a{
+	text-decoration:none;
+}
+
+.list th{
+	padding:5px;
+}
+
+#form{
+	width:790px;
+	border:1px solid black;
+	position:relative;
+	margin:0 auto;
+	text-align:center;
+	text-align:left;
+}

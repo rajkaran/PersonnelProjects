@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+.contentSection{
+	background-color:#FFF;
+	border:1px solid #15777a;
+	/*remove this*/
+	min-height:580px;
+	overflow:auto;
+	text-align:left;
+}
+
+.indexingMsg{
+	color:#15777a;
+	margin:5px 0;
+	padding:0px;
+	padding-left:20px;
+	height:auto;
+	width:auto;
+}
+
+.indexingMsg>span{
+	color:#8a0c03;
+}
+
+.indexingMsg p{
+	margin:0px;
+	padding:0px;
+	font-family:"Lucida Calligraphy", Times, serif;
+	font-size:26px;
+	letter-spacing:5px;
+}
+
+.indexingMsg p span#wait{
+	margin:0px;
+	padding:0px;
+	letter-spacing:15px;
+	font-weight:bold;
+}
+

@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+.actionBar{
+	background-color:#FFF;
+	height:100px;
+	width:auto;
+	border:1px solid #15777a;
+	border-bottom:2px ridge #999;
+}
+
+.actionBar .actionIcon{
+	float:right;
+	width:125px;
+	height:auto;
+	/*border:1px solid black;*/
+	margin:12px 0;
+}
+
+.actionBar .actionIcon a{
+	text-decoration:none;
+}
+
+.actionBar .actionIcon img{
+	text-align:center;
+	margin:0 auto;
+	text-decoration:none;
+	border:0px;
+}
+
+.actionBar .actionIcon p{
+	text-align:center;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-weight:bold;
+	font-size:18px;
+	color:#15777a;
+	text-decoration:none;
+	margin:0px;
+	padding:0px;
+}

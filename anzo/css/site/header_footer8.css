@@ -1,0 +1,25 @@
+.searchBlock{
+	margin:10px 0 0 20px;
+}
+
+.searchBlock span{
+	position:relative;
+	top:4px;	
+}
+
+.searchBlock select{
+	top:4px;
+}
+
+.searchBlock button{
+	top:9px ;
+	background-image:url(../../img/searchdark8.png);
+}
+
+.searchBlock .search:hover{
+	background-image:url(../../img/searchfade8.png);
+}
+
+.navStrip .navBar .title .category ul .subCategory {
+
+}

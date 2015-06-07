@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, div, ul, li, p, span, a, button, input, textarea, select, label {
+	margin:0px;
+	padding:0px;
+}
+
+.loginWrapper{
+	text-align:center;
+	margin:auto auto;
+	/*border:1px solid pink;*/
+	vertical-align:middle;
+	display:table-cell;;
+	
+}
+
+.logIn{
+	border:1px solid #8a0c03;
+	width:420px;
+	text-align:center;
+	margin:0 auto;
+	background-color:#FFF;
+}
+
+.logIn form{
+	text-align:left;
+}
+
+.logIn .caption{
+	text-align:center;
+	font-family:"Courier New", Courier, monospace;
+	font-size:30px;
+	font-weight:bold;
+	/*margin-top:15px;*/
+	color:#15777a;
+	background-color:#8a0c03;
+}
+
+.logIn .userName, .logIn .password{
+	margin:25px 0 0 15px;
+	position:relative;
+}
+
+.logIn .userName label, .logIn .password label{
+	font-family:Calibri;
+	font-size:22px;
+	color:#15777a;
+}
+
+label input {
+	position:absolute;
+	left:130px;
+	width:250px;
+	height:25px;
+	border:2px solid #15777a;
+	font-size:18px;
+}
+
+.logIn .buttonPanel{
+	margin:40px 0 25px 15px;
+	position:relative;
+	height:30px;
+	width:384px;
+	/*border:1px solid black;*/
+}
+
+.logIn .buttonPanel #forget{
+	position:absolute;
+	left:128px;
+	height:24px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	background-color: #15777a;
+	border:1px outset #15777a;
+	color:#8a0c03;
+	padding:0 7px;
+	padding-top:5px;
+	text-decoration:none;
+}
+
+.logIn .buttonPanel #forget:hover{
+	background-color: #8a0c03;
+	border:1px inset #8a0c03;
+	color:#15777a;
+}
+
+.logIn .buttonPanel #logIn{
+	position:absolute;
+	left:314px;
+	height:30px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	background-color: #15777a;
+	border:1px outset #15777a;
+	color:#8a0c03;
+	padding:0 6px;
+}
+
+.logIn .buttonPanel #logIn:hover{
+	background-color: #8a0c03;
+	border:1px inset #8a0c03;
+	color:#15777a;
+}
+
+.logIn .error{
+	margin-left:15px;
+	font-size:14px;
+	color:red;
+}
+
+

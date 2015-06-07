@@ -1,0 +1,89 @@
+body{
+background-image:url(../images/admin_login_bg.jpg);
+margin:0 auto;
+/*margin-left: 0px;
+margin-top: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+*/}
+
+.sitename{
+font-family: Century Schoolbook;
+font-size:40px;
+color:#FFFFFF;
+}
+
+.backend{
+background-color:#24285B;
+font-family: "Bradley Hand ITC";
+font-size:30px;
+color:#999999;
+}
+
+#wrapper{
+margin:0px;
+height: 350px;
+width: 100%;
+padding-top:60px;
+}
+
+.loginblock{ 
+border-radius:15px;
+border: 1px solid #666666;
+background-color:#24285B;
+width:350px;
+height:350px;
+}
+
+.error{
+color:#CC0000;
+padding-left:35px;
+font-size:14px;
+font-family:Geneva, Arial, Helvetica, sans-serif;
+}
+
+.blocktitle{
+font-family:Geneva, Arial, Helvetica, sans-serif;
+font-size:26px;
+color:#FFFFFF;
+}
+
+label{
+padding-left:40px;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size-adjust:20px;
+color:#FFFFFF;
+float:left;
+}
+
+input{
+border-radius:15px;
+padding-left:10px;
+padding-right:10px;
+}
+
+.button{
+width:80%;
+background-color:#FF6600;
+color:#FFFFFF;
+font-weight:bold;
+}
+
+a:link {color:#993300;text-decoration:none;}    /* unvisited link */
+a:visited {color:#FFFFFF;text-decoration:none;} /* visited link */
+a:hover {color:#999999;text-decoration:none;}   /* mouse over link */
+a:active {color:#99FF00;text-decoration:none;}  /* selected link */
+
+#redirect{
+font-family:"Blackadder ITC";
+font-size:28px;
+margin:0px;
+padding:0px;
+}
+
+.error{
+color:#FF3300;
+font-size:12px;
+font-family:Georgia, "Times New Roman", Times, serif;
+padding-left:0px;
+}

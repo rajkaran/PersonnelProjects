@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+.contentSection{
+	width:1024px;
+	margin:0 auto;
+	text-align:center;
+	min-height:570px;
+}
+
+#searchMessage{
+	text-align:left;
+	margin:10px 0 10px 20px;
+}
+
+#resultCount{
+	font-family:"Adobe Garamond Pro";
+	color:#666;
+}
+
+#searchString{
+	margin:10px 0;
+	font-family:Calibri;
+	font-size:28px;
+}
+
+#searchString span{
+	color:#15777A;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+#searchResult{
+	margin:20px 0 10px 10px;
+	text-align:left;
+}
+
+hr {
+background-color:#444;
+border-width:0;
+color:#444;
+height:2px;
+line-height:0;
+page-break-after:always;
+text-align:center;
+width:90%;
+}
+
+.eachResult{
+	margin-top:20px;
+}
+

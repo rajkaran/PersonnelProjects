@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+
+.contentSection{
+	width:1024px;
+	margin:0 auto;
+	text-align:center;
+	min-height:630px;
+	height:auto;
+}
+
+#description{
+	width:750px;
+	height:auto;
+	float:left;
+	text-align:left;
+	padding:10px;
+}
+
+#eventList{
+	width:240px;
+	float:right;
+	text-align:left;
+}
+
+#eventList p{
+	margin:10px 0 0px 0px;
+	font-family:"Bradley Hand ITC", serif;
+	font-weight:bolder;
+	font-size:24px;
+	width:auto;
+	height:auto;
+	border-bottom:2px solid grey;
+	text-align:center;
+	color:#15777A;
+}
+
+#eventList ul{
+	height:550px;
+	overflow:auto;
+	padding:0 5px;
+}
+
+#eventList ul li{
+	list-style:none;
+	width:210px;
+	border-bottom:1px solid grey;
+	overflow:hidden;
+	padding:5px 0;
+}
+
+#eventList ul li:hover{
+	background-color:#CCC;
+}
+
+#eventList ul li.selected{
+	background-color:#3B618E;
+}
+
+#eventList ul li.selected a{
+	color:#FFF;
+}
+
+#eventList ul li a{
+	text-decoration:none;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	margin:0 5px;
+	color:#ce0010;
+	display:block;
+}
+
+#eventList ul li a:hover{
+	color:#ce0010;
+}

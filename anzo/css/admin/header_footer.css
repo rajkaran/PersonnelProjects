@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, html, div, label, table, td, tr, th, fieldset{
+	padding:0px;
+	margin:0px;
+}
+
+body{
+	background-color:rgb(204,227,248);
+}
+
+.pageWrapper{
+	
+}
+
+.header{
+	text-align:left;
+}
+
+.siteStrip{
+	/*border:1px solid black;*/
+	width:1024px;
+	height:100px;
+	text-align:center;
+	margin:0 auto;
+}
+
+.siteStrip .siteName{
+	text-align:left;
+	/*border:1px solid pink;*/
+}
+
+
+.siteStrip .siteName span{
+	width:auto;
+	height:auto;
+	font-family:"Adobe Garamond Pro", serif;
+	font-size:76px;
+	font-weight:bold;
+	color:rgb(21,119,122);
+}
+
+.siteStrip .siteName span a{
+	text-decoration:none;
+	color:rgb(21,119,122);
+}
+
+.taskStrip{
+	width:100%;
+	height:42px;
+	background-color:rgb(21,119,122);
+}
+
+.taskStrip .taskBar{
+	width:1024px;
+	height:inherit;
+	text-align:center;
+	margin:0 auto;
+}
+
+.taskStrip .taskBar .align{
+	text-align:left;
+	height:auto;
+	/*border:1px solid pink;*/
+	padding:4px 0;
+
+}
+
+.taskStrip .taskBar .level{
+	width:auto;
+	height:auto;
+	float:left;
+	font-family:"letter Gothic Std", serif;
+	font-size:30px;
+	font-weight:normal;
+	color:#FFF;
+	
+}
+
+.taskStrip .taskBar .user{
+	width:auto;
+	height:auto;
+	float:right;
+	margin-right:20px;
+	/*margin-top:-5px;*/
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:24px;
+	font-weight:normal;
+	color:#FFF;
+	
+}
+
+.taskStrip .taskBar .logOut{
+	width:auto;
+	height:auto;
+	float:right;
+	margin-top:5px;
+}
+
+.taskStrip .taskBar .logOut a{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:20px;
+	text-decoration:underline;
+	color:#FFF;
+}
+
+/*Style for header ends here*/
+
+.containerWrapper{
+	width:1024px;
+	text-align:center;
+	margin:0 auto;
+	min-height:100px;
+}
+
+
+/*Style for footer starts here*/
+
+.footer {
+	width:100%;
+	height:110px;
+	background-color:rgb(21,119,122);
+}
+
+.footer .footContainer{
+	text-align:center;
+	margin:0 auto;
+	width:1024px;
+	
+}
+
+.footer .footContainer .logo{
+	float:left;
+	margin:10px 0;
+	
+}
+
+.footer .footContainer .footInfo{
+	text-align:center;
+	margin:0 auto;
+	width:300px;
+	height:auto;
+	color:#FFF;
+	font-family:kalinga;
+	font-size:16px;
+	padding:15px 0;
+	
+}
